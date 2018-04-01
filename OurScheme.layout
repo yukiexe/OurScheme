@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="include\DStree.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1594" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Token.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1790" topLine="45" />
+		</Cursor>
+		<Folding>
+			<Collapse line="93" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="32328" topLine="777" />
+		</Cursor>
+		<Folding>
+			<Collapse line="17" />
+			<Collapse line="21" />
+			<Collapse line="60" />
+			<Collapse line="110" />
+			<Collapse line="113" />
+			<Collapse line="115" />
+			<Collapse line="122" />
+			<Collapse line="130" />
+			<Collapse line="194" />
+			<Collapse line="259" />
+			<Collapse line="266" />
+			<Collapse line="270" />
+			<Collapse line="273" />
+			<Collapse line="276" />
+			<Collapse line="283" />
+			<Collapse line="306" />
+			<Collapse line="358" />
+			<Collapse line="367" />
+			<Collapse line="387" />
+			<Collapse line="408" />
+			<Collapse line="410" />
+			<Collapse line="411" />
+			<Collapse line="459" />
+			<Collapse line="485" />
+			<Collapse line="493" />
+			<Collapse line="500" />
+		</Folding>
+	</File>
+	<File name="include\Token.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DStree.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2059" topLine="36" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="64" />
+			<Collapse line="82" />
+			<Collapse line="115" />
+			<Collapse line="119" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>
