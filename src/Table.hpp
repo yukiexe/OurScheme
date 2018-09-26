@@ -4,7 +4,7 @@
 #include <fstream>
 #include <vector>
 
-#include "Token.h"
+#include "Token.hpp"
 
 enum IDType { MAINPROGRAM = 0, ARRAY = 1, BOOLEAN = 2, /*CHARACTER = 3,*/
               INTEGER = 4, LABEL = 5, REAL = 6,
@@ -20,25 +20,24 @@ struct Identifier {
 typedef vector<Identifier> IdentifierTable ;
 typedef vector<unsigned int> InformationTable ;
 
+typedef int GroupN ;
+
 class Table {
 public:
-  Table() { m_list.clear() ; } ;
+  Table() { m_list.clear() ; }
   // virtual ~Table();
 
-  Table( GroupN groupN ) {
-    m_list.clear() ;
-    SetTableN( groupN ) ;
-  }
+  Table( GroupN groupN ) : Table() { SetTableN( groupN ) ; }
 
-  Table( string tableName, GroupN groupN ) ;
+  Table( string tableName, GroupN groupN );
 
   void SetTableN( GroupN val ) { m_tableN = val; }
   void SetToken( Token &t ) ;
   void SetIdentifier( Identifier &id ) ;
   void SetLABEL( Identifier id ) ;
 
-  TL GetList() { return m_list; }
-  IdentifierTable GetIDTable() { return m_idtable; }
+  auto GetList() { return m_list; }
+  auto GetIDTable() { return m_idtable; }
   unsigned int GetMAINPROGRAM() ;
   unsigned int GetIDIndex( Token t ) ;
 
@@ -58,7 +57,7 @@ public:
 protected:
 private:
   GroupN m_tableN ;
-  TL m_list ;
+  Tokens m_list ;
   IdentifierTable m_idtable ;
 } ;
 

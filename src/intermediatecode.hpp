@@ -3,8 +3,8 @@
 
 #include <sstream>
 #include <vector>
-#include "Table.h"
-#include "yukitool.h"
+#include "Table.hpp"
+#include "yukitool.hpp"
 
 struct POS {
   unsigned int x ;

@@ -101,4 +101,6 @@ private:
 typedef Token *TokenP ;
 typedef vector<TokenP> TokenPs ;
 
+typedef vector<Token> Tokens ;
+
 #endif // TOKEN_H_INCLUDED

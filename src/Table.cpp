@@ -1,9 +1,6 @@
 #include "Table.hpp"
 
-Table::Table( string tableName, GroupN groupN ) {
-  m_list.clear() ;
-  SetTableN( groupN ) ;
-
+Table::Table( string tableName, GroupN groupN ) : Table( groupN ) {
   ifstream fin( tableName.c_str(), ifstream::in ) ;
 
   Token nextToken ;
@@ -24,7 +21,7 @@ void Table::SetIdentifier( Identifier &id ) {
 }
 
 void Table::SetLABEL( Identifier id ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( id.token.name == it->token.name &&
          id.subroutine == it->subroutine &&
          LABEL == it->idtype )
@@ -33,19 +30,19 @@ void Table::SetLABEL( Identifier id ) {
 } //
 
 unsigned int Table::GetMAINPROGRAM() {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ )
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ )
     if( it->idtype == MAINPROGRAM ) return it->token.index ;
   return 0 ;
 } // GetMAINPROGRAM()
 
 unsigned int Table::GetIDIndex( Token t ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ )
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ )
     if( t.name == it->token.name ) return it->token.index ;
   return 0 ;
 } // GetIDIndex()
 
 bool Table::CmpToken( Token &t ) {
-  for ( TL::iterator it = m_list.begin() ; it < m_list.end() ; it++ ) {
+  for ( auto it = m_list.begin() ; it < m_list.end() ; it++ ) {
     if ( t.name == it->name ) {
       t = *it ;
       return true ;
@@ -56,7 +53,7 @@ bool Table::CmpToken( Token &t ) {
 } // CmpToken()
 
 bool Table::CmpType( Token t, IDType idtype ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( t.name == it->token.name && idtype == it->idtype )
       return true ;
   } // for
@@ -65,7 +62,7 @@ bool Table::CmpType( Token t, IDType idtype ) {
 } // CmpType()
 
 bool Table::CmpVariable( Token &t, unsigned int subroutine ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( t.name == it->token.name && it->subroutine == subroutine &&
          CmpVariableType( *it ) ) {
       t = it->token ;
@@ -77,7 +74,7 @@ bool Table::CmpVariable( Token &t, unsigned int subroutine ) {
 } // CmpVariable()
 
 bool Table::CmpLABEL( Identifier &id ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( id.token.name == it->token.name &&
          id.subroutine == it->subroutine &&
          LABEL == it->idtype ) {
@@ -90,7 +87,7 @@ bool Table::CmpLABEL( Identifier &id ) {
 } // CmpLABEL()
 
 unsigned int Table::CmpLABEL( unsigned int i ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( i == it->token.index )
       return it->pointer ;
   } // for
@@ -99,7 +96,7 @@ unsigned int Table::CmpLABEL( unsigned int i ) {
 } // CmpLABEL()
 
 bool Table::CmpSUBROUTINE( Identifier &id ) {
-  for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
+  for ( auto it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( id.token.name == it->token.name && SUBROUTINEID == it->idtype ) {
       id = *it ;
       return true ;

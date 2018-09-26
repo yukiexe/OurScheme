@@ -6,6 +6,7 @@
 # include <vector>
 # include "Token.hpp"
 # include "DStree.hpp"
+# include "intermediatecode.hpp"
 
 using namespace std ;
 
