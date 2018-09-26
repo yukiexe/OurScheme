@@ -1,4 +1,4 @@
-#include "..\include\Table.h"
+#include "..\include\Table.hpp"
 
 Table::Table( string tableName, GroupN groupN ) {
   m_list.clear() ;
@@ -119,7 +119,7 @@ void Table::Hash( Token &t ) {
   for ( IdentifierTable::iterator it = m_idtable.begin() ; it < m_idtable.end() ; it++ ) {
     if ( t.index == it->token.index ) {
       ++t.index ;
-      it = m_idtable.begin() ; // ±qÀY¦Arun¤@¦¸
+      it = m_idtable.begin() ; // ï¿½qï¿½Yï¿½Arunï¿½@ï¿½ï¿½
     } // if
   } // for
 } // Hash

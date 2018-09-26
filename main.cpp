@@ -4,8 +4,8 @@
 # include <sstream>
 # include <string>
 # include <vector>
-#include "include\Token.h"
-#include "include\DStree.h"
+# include "include\Token.hpp"
+# include "include\DStree.hpp"
 
 using namespace std ;
 
@@ -348,7 +348,7 @@ bool EvalSExp( DStreeP indst, DStreeP &outdst, DefinedTableP defTable ) {
         outdst = new DStree( ln, new Token( LEFTPAREN ), new Token( RIGHTPAREN ) ) ;
 
         // ckeck Func
-        EvalSExp( indst->GetDST( 0 ), tempDST, defTable ) ; // tempDST ¥á±ó
+        EvalSExp( indst->GetDST( 0 ), tempDST, defTable ) ; // tempDST ï¿½ï¿½ï¿½
 
         if ( gNextDefined == NULL ) throw tempDST->GetToken( 0 ) ;
         else if ( ! gNextDefined->IsFunc() ) throw gNextDefined->GetDST()->GetToken( 0 ) ;
@@ -392,7 +392,7 @@ bool EvalSExp( DStreeP indst, DStreeP &outdst, DefinedTableP defTable ) {
 
         // LocalDefinedTableProcess( defTable, nextDefTable ) ;
 
-        // ¶Ç¤J©w¸q«á¡A°õ¦æFunc
+        // ï¿½Ç¤Jï¿½wï¿½qï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½Func
         for ( unsigned int i = 0 ; i < def->GetDSTsSize() ; ++i )
           EvalSExp( def->GetDST( i ), outdst, nextDefTable ) ;
 
@@ -470,7 +470,7 @@ bool EvalSExp( DStreeP indst, DStreeP &outdst, DefinedTableP defTable ) {
 
       nextDST = indst->GetDST( 0 ) ;
 
-      // ¦pªG¤w©w¸qªº¥ý¦æ³B²z
+      // ï¿½pï¿½Gï¿½wï¿½wï¿½qï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½z
       /*
       if ( nextDST->GetCommand() != NULL ) EvalSExp( nextDST, tempDST, defTable ) ;
       else tempDST = nextDST ;
@@ -506,7 +506,7 @@ bool EvalSExp( DStreeP indst, DStreeP &outdst, DefinedTableP defTable ) {
       } // else if
 
 
-      // ¿é¥X¥Î
+      // ï¿½ï¿½Xï¿½ï¿½
       outdst = indst ;
       outdst->SetToken( 0, tempDST->GetToken( 0 ) ) ;
       return true ;

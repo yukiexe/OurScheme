@@ -1,4 +1,4 @@
-#include "..\include\Token.h"
+#include "..\include\Token.hpp"
 
 LineCounter::LineCounter() {
   m_newLine = false ;
