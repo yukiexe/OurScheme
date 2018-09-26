@@ -46,8 +46,13 @@ typedef Command *CommandP ;
 class DStree {
 public:
   DStree() ;
-  DStree( LevelN ln ) ;
-  DStree( LevelN ln, TokenP token1, TokenP token2 ) ;
+  DStree( LevelN ln ) : DStree() {
+    m_ln = ln ;
+  }
+  DStree( LevelN ln, TokenP token1, TokenP token2 ) : DStree( ln ) {
+    m_tokens[ 0 ] = token1 ;
+    m_tokens[ 1 ] = token2 ;
+  }
 
   void SetID( ID id ) { m_id = id ; } // SetID()
 

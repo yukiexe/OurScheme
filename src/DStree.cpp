@@ -41,27 +41,6 @@ DStree::DStree() {
   m_dotdst = NULL ;
 } // DStree::DStree()
 
-DStree::DStree( LevelN ln ) {
-  m_id = -1 ;
-  m_ln = ln ;
-  m_command = NULL ;
-  m_isHaveDOT = false ;
-  m_tokens[ 0 ] = NULL ;
-  m_tokens[ 1 ] = NULL ;
-  m_dotdst = NULL ;
-} // DStree::DStree()
-
-DStree::DStree( LevelN ln, TokenP token1, TokenP token2 ) {
-  m_id = -1 ;
-  m_ln = ln ;
-  m_command = NULL ;
-  m_isHaveDOT = false ;
-  m_tokens[ 0 ] = token1 ;
-  m_tokens[ 1 ] = token2 ;
-  m_dotdst = NULL ;
-} // DStree::DStree()
-
-
 void DStree::Copy( DStree * dst ) {
   m_id = dst->GetID() ;
   m_ln = dst->GetLevelN() ;
