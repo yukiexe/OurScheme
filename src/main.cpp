@@ -4,8 +4,8 @@
 # include <sstream>
 # include <string>
 # include <vector>
-# include "include\Token.hpp"
-# include "include\DStree.hpp"
+# include "Token.hpp"
+# include "DStree.hpp"
 
 using namespace std ;
 
@@ -157,7 +157,7 @@ bool ATOM( TokenP &token, bool &gotLEFTPAREN ) ;
 bool CommandExp( DStreeP &dst ) ;
 bool SExpDOT( DStreeP &dst ) ;
 
-bool EvalSExp( DStreeP indst, DStreeP &outdst ) ;
+// bool EvalSExp( DStreeP indst, DStreeP &outdst ) ;
 void PredicateCheck( bool isIt, DStreeP &resultDST ) ;
 
 void Initialization() {

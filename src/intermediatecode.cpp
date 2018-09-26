@@ -1,4 +1,4 @@
-#include "..\include\intermediatecode.hpp"
+#include "intermediatecode.hpp"
 
 IntermediateCode::IntermediateCode() {
   // ctor

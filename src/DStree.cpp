@@ -1,4 +1,4 @@
-#include "..\include\DStree.hpp"
+#include "DStree.hpp"
 
 Command::Command() {
   SetType( NOOOOO ) ;

@@ -1,4 +1,4 @@
-#include "..\include\yukitool.hpp"
+#include "yukitool.hpp"
 
 YukiTool::YukiTool() {
     //ctor

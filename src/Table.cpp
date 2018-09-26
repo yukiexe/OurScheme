@@ -1,4 +1,4 @@
-#include "..\include\Table.hpp"
+#include "Table.hpp"
 
 Table::Table( string tableName, GroupN groupN ) {
   m_list.clear() ;
