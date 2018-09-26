@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "Token.h"
+#include "Token.hpp"
 
 typedef unsigned int LevelN ;
 typedef int ID ;
