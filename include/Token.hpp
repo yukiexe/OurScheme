@@ -66,9 +66,9 @@ public:
 
   void SetName( string str ) { m_name = str ; } // SetName()
 
-  TokenType GetType() { return m_type; }
+  inline TokenType GetType() { return m_type; }
 
-  string GetName() { return m_name; }
+  inline string GetName() { return m_name; }
 
   bool GetBool() {
     if ( CheckType( T ) ) return true ;
@@ -78,11 +78,11 @@ public:
 
   // Check
 
-  bool CheckType( TokenType type ) { return ( m_type == type ) ; }
+  inline bool CheckType( TokenType type ) { return ( m_type == type ) ; }
 
-  bool CheckName( string str ) { return ( m_name == str ) ; }
+  inline bool CheckName( string str ) { return ( m_name == str ) ; }
 
-  bool CheckToken( Token * token ) { return ( m_name == token->GetName() ) ; }
+  inline bool CheckToken( Token * token ) { return ( m_name == token->GetName() ) ; }
 
   bool CheckCommandType() ;
 
