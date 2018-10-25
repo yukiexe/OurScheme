@@ -21,11 +21,19 @@ enum TokenType {
 
 class LineCounter {
 public:
-  LineCounter() ;
+  LineCounter() {
+    m_newLine = false ;
+    m_line = 1 ;
+    m_column = 1 ;
+  } // LineCounter::LineCounter()
 
-  void Reset( bool isSkip ) ;
+  void Reset( bool isSkip ) {
+    m_newLine = !isSkip ;
+    m_line = 1 ;
+    m_column = 1 ;
+  } // LineCounter::Reset()
 
-  char Counter( char ch ) ;
+  char Counter( const char &ch ) ;
 
   unsigned int GetLineNum() { return m_line ; } // GetLineNum()
 
@@ -47,8 +55,7 @@ class Token {
 public:
   Token() { m_type = NOTHING ; } // Token()
 
-  Token( LineCounter &lc ) ; // Token()
-
+  Token( LineCounter &lc ) { GetToken( lc ); }
   Token( TokenType type ) ; // Token()
 
   Token( TokenType type, string str ) ; // Token()

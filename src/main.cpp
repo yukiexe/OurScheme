@@ -1,4 +1,3 @@
-// StyleCheckType string, vector, stringstream
 // OurScheme Project3
 # include <iostream>
 # include <sstream>

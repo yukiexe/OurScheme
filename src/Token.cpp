@@ -1,18 +1,7 @@
 #include "Token.hpp"
 
-LineCounter::LineCounter() {
-  m_newLine = false ;
-  m_line = 1 ;
-  m_column = 1 ;
-} // LineCounter::LineCounter()
 
-void LineCounter::Reset( bool isSkip ) {
-  m_newLine = !isSkip ;
-  m_line = 1 ;
-  m_column = 1 ;
-} // LineCounter::Reset()
-
-char LineCounter::Counter( char ch ) { // 與 peek 之 char 同位置
+char LineCounter::Counter( const char &ch ) { // 與 peek 之 char 同位置
   if ( ch == '\n' ) {
     m_oldline = m_line ;
     m_oldcolumn = m_column ;
@@ -26,11 +15,6 @@ char LineCounter::Counter( char ch ) { // 與 peek 之 char 同位置
 } // LineCounter::Counter()
 
 // Token
-
-Token::Token( LineCounter &lc ) {
-  GetToken( lc ) ;
-} // Token::Token()
-
 Token::Token( TokenType type ) {
   SetType( type ) ;
   if ( CheckType( LEFTPAREN )  ) SetName( "(" ) ;

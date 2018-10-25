@@ -1,9 +1,5 @@
 #include "intermediatecode.hpp"
 
-IntermediateCode::IntermediateCode() {
-  // ctor
-}
-
 IntermediateCode::IntermediateCode( Identifier id ) {
   POS pos ;
   if ( id.idtype == CALLID ) {
@@ -59,9 +55,7 @@ IntermediateCode::IntermediateCode( Token t1, Token t2, Token t3, Token t4  ) {
 
 } // IntermediateCode()
 
-void IntermediateCode::SetCode( unsigned int tx, Token t ) {
-  m_code[tx] = TokentoPOS( t ) ;
-} // SetCode()
+
 
 void IntermediateCode::SetCode( unsigned int tx, POS p ) {
   m_code[tx] = p ;

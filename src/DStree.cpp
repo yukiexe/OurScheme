@@ -1,10 +1,5 @@
 #include "DStree.hpp"
 
-Command::Command() {
-  SetType( NOOOOO ) ;
-  m_name = "" ;
-} // Command::Command()
-
 Command::Command( TokenP token ) {
   m_name = token->GetName() ;
   if ( CheckCmd( "cons" ) || CheckCmd( "list" ) ) SetType( CONSTRUCTOR ) ;

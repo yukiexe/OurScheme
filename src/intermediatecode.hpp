@@ -13,11 +13,14 @@ struct POS {
 
 class IntermediateCode {
     public:
-        IntermediateCode();
+        IntermediateCode() {}
         IntermediateCode( Identifier id ) ;
         IntermediateCode( Token t1, Token t2, Token t3, Token t4  ) ;
 
-        void SetCode( unsigned int tx, Token t ) ;
+        inline void SetCode( unsigned int tx, Token t ) {
+            m_code[tx] = TokentoPOS( t ) ;
+        } // SetCode()
+
         void SetCode( unsigned int tx, POS p ) ;
         void SetStr() ;
         string Getcode() ;

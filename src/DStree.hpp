@@ -24,7 +24,10 @@ enum CommandType {
 
 class Command {
 public:
-  Command() ;
+  Command() {
+    SetType( NOOOOO ) ;
+    m_name = "" ;
+  } // Command::Command()
   Command( TokenP token ) ;
 
   void SetType( CommandType type ) { m_type = type ; } // SetType()
