@@ -2,8 +2,6 @@
 
 PL OurScheme project for the spring of 2013, Part 2 ("Project 2")
 
-Due : 5/7, 2013(Tuesday) before midnight
-
 // Some test input of Project 1 may again appear in Project 2
 // e.g., if in Project 1 the input was : (1 2 3)
 //       then in Project 2, this input may reappear as : '(1 2 3)
@@ -11,7 +9,7 @@ Due : 5/7, 2013(Tuesday) before midnight
 
 In Project 1, you have done the following :
 
-  ¡¯ You wrote a scanner or a ¡uscanner layer¡v (consisting of several
+  ï¿½ï¿½ You wrote a scanner or a ï¿½uscanner layerï¿½v (consisting of several
      functions).  
      
      This scanner is responsible for (1) using separators to get tokens  
@@ -20,7 +18,7 @@ In Project 1, you have done the following :
      In a sense, the scanner "transforms" the actual input stream of
      characters into a (conceptual) input stream of tokens.
   
-  ¡¯ You wrote a parser or a ¡uparser layer¡v(consisting of several
+  ï¿½ï¿½ You wrote a parser or a ï¿½uparser layerï¿½v(consisting of several
      functions).
      
      The parser "reads" the conceptual input stream of tokens by calling 
@@ -31,15 +29,15 @@ In Project 1, you have done the following :
      satisfies the grammar of an S-expression, it constructs
      an internal, tree-like data structure for this S-expression.
   
-  ¡¯ You wrote a "pretty-printer".  Given a pointer to an internal data 
+  ï¿½ï¿½ You wrote a "pretty-printer".  Given a pointer to an internal data 
      structure that corresponds to some S-expression, the pretty-printer 
      prints out this S-expression in some pre-determined format.
   
-  ¡¯ You managed to print an error message signifying the location
+  ï¿½ï¿½ You managed to print an error message signifying the location
      of the so-called "error character" whenever the system encounters  
      a syntax error in the user's input.
   
-  ¡¯ You organized the working of your OurScheme interpreter in some way,
+  ï¿½ï¿½ You organized the working of your OurScheme interpreter in some way,
      so that the working of your system corresponds to the following 
      "code skeleton" :
   
@@ -64,14 +62,14 @@ In Project 1, you have done the following :
 For Project 2, you are to extend your system so that the following are
 realized (by your system).
 
-  ¡¯ All "primitive exressions" (expressions that involve primitive 
+  ï¿½ï¿½ All "primitive exressions" (expressions that involve primitive 
      operations) can be evaluated.
   
-  ¡¯ 'define' is supported (but no definition (and use) of functions yet)
+  ï¿½ï¿½ 'define' is supported (but no definition (and use) of functions yet)
   
-  ¡¯ "Conditional processing" (via the use of 'if' and 'cond') is supported.
+  ï¿½ï¿½ "Conditional processing" (via the use of 'if' and 'cond') is supported.
   
-  ¡¯ Sequencing (functional composition and the use of 'begin') is supported.
+  ï¿½ï¿½ Sequencing (functional composition and the use of 'begin') is supported.
 
 Your main program should now look something like the following.
 
@@ -96,7 +94,7 @@ Your main program should now look something like the following.
    
    Print : 'Thanks for using OurScheme!'
 
-¦Ü©óerrorªº§PÂ_(«ç¼Ëªº¼gªkÀ³¸Óºâ¤°»ò¼Ëªºerror¡H)¡A½Ð¬ÝHowToWriteOurScheme.doc
+ï¿½Ü©ï¿½errorï¿½ï¿½ï¿½Pï¿½_(ï¿½ï¿½Ëªï¿½ï¿½gï¿½kï¿½ï¿½ï¿½Óºâ¤°ï¿½ï¿½Ëªï¿½errorï¿½H)ï¿½Aï¿½Ð¬ï¿½HowToWriteOurScheme.doc
 
 Below are the primitives (and features) that your system should implement.
 
@@ -260,7 +258,7 @@ ERROR (attempt to apply non-function) : 4
 
 > ; 3. To give a (symbolic) name to an object
 
-; Meaning of DEFINE revisited ("¥O")
+; Meaning of DEFINE revisited ("ï¿½O")
 
 ; Basically, DEFINE sets up a (temporary) binding between a symbol 
 ; and an S-expression
@@ -270,13 +268,13 @@ ERROR (attempt to apply non-function) : 4
 abc
 ERROR (unbound symbol) : abc
 
-> (define a 5)   ; "¥Oa¬°5"; Åý§Ú­Ì§â"¨º­ÓªF¦è"¤SºÙ¬°'a'
+> (define a 5)   ; "ï¿½Oaï¿½ï¿½5"; ï¿½ï¿½ï¿½Ú­Ì§ï¿½"ï¿½ï¿½ï¿½ÓªFï¿½ï¿½"ï¿½Sï¿½Ù¬ï¿½'a'
 a defined
 
 > a              ; Is 'a' a name for something?
 5
 
-> (define x '((3 4) 5))   ; Åý§Ú­Ì§â"¨º­ÓªF¦è"¤SºÙ¬°'x'
+> (define x '((3 4) 5))   ; ï¿½ï¿½ï¿½Ú­Ì§ï¿½"ï¿½ï¿½ï¿½ÓªFï¿½ï¿½"ï¿½Sï¿½Ù¬ï¿½'x'
 x defined
 
 > x              ; Is 'x' a name for something?

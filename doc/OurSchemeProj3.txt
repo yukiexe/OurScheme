@@ -2,8 +2,6 @@
 
 PL OurScheme project for the spring of 2013, Part 3 ("Project 3")
 
-Due : 5/29, 2013(Wednesday) before midnight
-
 ==================================================================
 
 For this project, you need to extend EvalSExp(), so that it is capable of
@@ -25,7 +23,7 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
 
 ==================================================================
 
-¡° let
+ï¿½ï¿½ let
 
   'let' is the name of a function.  Its syntax is :
   
@@ -48,7 +46,7 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
   
   The working of 'let' is as follows :
   
-  ¡¯ The '...' part defines local symbols with bindings.
+  ï¿½ï¿½ The '...' part defines local symbols with bindings.
   
      e.g., 
      
@@ -64,7 +62,7 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
        AND
        'x' is bound to the atom 5, while 'y' is bound to the list (1 2 3).
   
-  ¡¯ The '.........' are normal S-expressions.  These S-expressions
+  ï¿½ï¿½ The '.........' are normal S-expressions.  These S-expressions
      are such that
      
      (i) The "LET-defined" local variables (i.e., 'x' and 'y') can appear 
@@ -157,7 +155,7 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
     )
   ERROR (let format)  
 
-¡° lambda
+ï¿½ï¿½ lambda
 
    The syntax of 'lambda' is :
    
@@ -234,7 +232,7 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
      )
    ERROR (incorrect number of arguments) : lambda expression
    
-¡° define
+ï¿½ï¿½ define
 
    The syntax of 'define' is :
    
@@ -347,9 +345,9 @@ Please also see HowToWriteOurScheme.doc (Latest modification : 05/11, 2011).
 
 ==================================================================
 
-¡uProj. 3¡vªºÃD¥Ø¦w±Æ
+ï¿½uProj. 3ï¿½vï¿½ï¿½ï¿½Dï¿½Ø¦wï¿½ï¿½
 
-  »P¡uProj. 2¡vªºÃD¥Øªº¦w±ÆÃþ¦ü¡C«e¤­ÃDµLerror¡A²Ä¤­ÃDªºÁôÂÃ¼Æ¾Ú
-  ¬O«e¥|ÃDªºÁôÂÃ¼Æ¾Úªº"¥[Á`"¡A²Ä¤QÃDªºª¬ªp¤]¤@¼Ë¡C
+  ï¿½Pï¿½uProj. 2ï¿½vï¿½ï¿½ï¿½Dï¿½Øªï¿½ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½eï¿½ï¿½ï¿½Dï¿½Lerrorï¿½Aï¿½Ä¤ï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½Ã¼Æ¾ï¿½
+  ï¿½Oï¿½eï¿½|ï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½Ã¼Æ¾Úªï¿½"ï¿½[ï¿½`"ï¿½Aï¿½Ä¤Qï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½pï¿½]ï¿½@ï¿½Ë¡C
 
     

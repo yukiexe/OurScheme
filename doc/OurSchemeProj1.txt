@@ -1,7 +1,5 @@
 2013 spring PL project (OurScheme) - Project 1
 
-Due : 4/02(¤G) midnight (23:59)
-
   // You are to implement something like the following
                  
   // 'exp' is a pointer that points to a linked list data structure;
